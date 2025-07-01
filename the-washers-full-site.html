@@ -1,0 +1,147 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Washers - Pressure Washing Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            color: #333;
+        }
+        header, footer {
+            background: #003366;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+        }
+        section {
+            padding: 30px 20px;
+            max-width: 900px;
+            margin: auto;
+            background: white;
+            margin-top: 20px;
+        }
+        h2 {
+            color: #003366;
+        }
+        .services ul {
+            columns: 2;
+            list-style: square;
+            padding-left: 20px;
+        }
+        input, select, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #quote-result {
+            display: none;
+            background: #e6f7ff;
+            padding: 15px;
+            border: 1px solid #00aaff;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>The Washers</h1>
+    <p>Central PA & Maryland’s Trusted Pressure Washing Experts</p>
+</header>
+
+<section>
+    <h2>About Us</h2>
+    <p>Hi, I’m Isaiah Harris, owner of The Washers. We provide professional, high-powered cleaning solutions for homes, businesses, and everything in between. Open 24/7 and proudly serving Central PA and parts of Maryland.</p>
+</section>
+
+<section class="services">
+    <h2>Services Offered</h2>
+    <ul>
+        <li>House Washing</li>
+        <li>Roof & Gutter Cleaning</li>
+        <li>Driveways & Sidewalks</li>
+        <li>Deck & Fence Restoration</li>
+        <li>Commercial Pressure Washing</li>
+        <li>Custom Jobs on Request</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Get a Quick Estimate & Send a Message</h2>
+    <form id="quote-form">
+        <label for="name">Your Name:</label>
+        <input type="text" id="name" required placeholder="Full Name">
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" required placeholder="e.g., 267-788-4998">
+
+        <label for="service">Select a Service:</label>
+        <select id="service" required>
+            <option value="">--Choose--</option>
+            <option value="house">House Washing ($0.15/sq ft)</option>
+            <option value="driveway">Driveway Cleaning ($0.12/sq ft)</option>
+            <option value="roof">Roof Cleaning ($0.25/sq ft)</option>
+            <option value="deck">Deck & Fence Restoration ($3.00/ft)</option>
+            <option value="gutter">Gutter Cleaning ($2.50/10ft)</option>
+        </select>
+
+        <label for="size">Enter Size (sq ft or linear ft):</label>
+        <input type="number" id="size" min="1" required placeholder="e.g., 500">
+
+        <label for="message">Additional Message:</label>
+        <textarea id="message" rows="4" placeholder="Let us know any extra details..."></textarea>
+
+        <button type="submit">Get Estimate & Send</button>
+    </form>
+
+    <div id="quote-result"></div>
+</section>
+
+<footer>
+    <p>Phone: <a href="tel:2677884998" style="color: #ffffff;">267-788-4998</a><br>
+    Instagram: <a href="https://instagram.com/2lwashers" target="_blank" style="color: #ffffff;">@2lwashers</a></p>
+    <p>&copy; 2025 The Washers | Designed for Isaiah Harris</p>
+</footer>
+
+<script>
+    document.getElementById("quote-form").addEventListener("submit", function(e) {
+        e.preventDefault();
+        const name = document.getElementById("name").value;
+        const phone = document.getElementById("phone").value;
+        const service = document.getElementById("service").value;
+        const size = parseFloat(document.getElementById("size").value);
+        const message = document.getElementById("message").value;
+
+        let price = 0;
+        switch(service) {
+            case "house": price = size * 0.15; break;
+            case "driveway": price = size * 0.12; break;
+            case "roof": price = size * 0.25; break;
+            case "deck": price = size * 3.00; break;
+            case "gutter": price = (size / 10) * 2.50; break;
+        }
+
+        const resultDiv = document.getElementById("quote-result");
+        resultDiv.style.display = "block";
+        resultDiv.innerHTML = `
+            <strong>Thank you, ${name}!</strong><br>
+            <strong>Estimated Price:</strong> $${price.toFixed(2)}<br>
+            <em>Service:</em> ${service}<br>
+            <em>Size:</em> ${size} units<br>
+            <em>Phone:</em> ${phone}<br>
+            <em>Message:</em> ${message ? message : 'N/A'}<br><br>
+            <strong>We'll contact you shortly to confirm!</strong>
+        `;
+    });
+</script>
+
+</body>
+</html>
