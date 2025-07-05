@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Washers</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    header, footer { background: #333; color: #fff; padding: 1rem; text-align: center; }
+    section { padding: 2rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    img { width: 100%; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>The Washers</h1>
+    <p>Pressure Washing Experts in Central PA & Maryland</p>
+  </header>
+
+  <section>
+    <h2 style="text-align:center;">Testimonials</h2>
+    <div class="testimonial">"Isaiah and his team were amazing — our home looks like new again!"<br>— Sarah G., Harrisburg</div>
+    <div class="testimonial">"Professional, quick, and thorough. Highly recommend The Washers."<br>— Derek M., York</div>
+    <div class="testimonial">"Super happy with the results on our commercial lot. Clean and ready to impress."<br>— Mike T., Lancaster</div>
+  </section>
+
+  <section>
+    <h2 style="text-align:center;">Project Gallery</h2>
+    <div class="gallery">
+      <img src="images/7340655E-BDD2-465E-B496-3A21B17A6C17.jpeg" alt="Project image 1" />
+      <img src="images/098D944B-EB61-49DA-92F7-F9D0EC947819.jpeg" alt="Project image 2" />
+      <img src="images/50161A22-D397-47C8-BA57-8B228BE03CC0.jpeg" alt="Project image 3" />
+      <img src="images/AEBD5497-826A-4D80-81BF-3B79BE1E1AF7.jpeg" alt="Project image 4" />
+      <img src="images/25FA0DE0-4A3D-42FC-B70D-3F3A791E1FED.jpeg" alt="Project image 5" />
+      <img src="images/34846D86-AF9E-41F5-8EB9-7289DCFD8879.jpeg" alt="Project image 6" />
+      <img src="images/55D0EF8D-7EA9-4737-AECA-FD9FB1552FD7.jpeg" alt="Project image 7" />
+      <img src="images/B97AF03C-4AC6-4405-AE0F-410B7B99496C.jpeg" alt="Project image 8" />
+      <img src="images/F8658A29-97E9-4742-99F4-1C7C99CA88AA.jpeg" alt="Project image 9" />
+    </div>
+  </section>
+
+  <section id="quote">
+    <h2 style="text-align:center;">Get a Free Estimate</h2>
+    <form action="https://formspree.io/f/mrbkjwae" method="POST" style="max-width: 600px; margin: auto;">
+      <input type="hidden" name="_subject" value="New Quote Request" />
+      <input type="hidden" name="_template" value="table" />
+      <label>Full Name:<br><input type="text" name="name" required></label><br><br>
+      <label>Phone Number:<br><input type="text" name="phone" required></label><br><br>
+      <label>Email Address:<br><input type="email" name="_replyto" required></label><br><br>
+      <label>Service Type:<br>
+        <select name="service" required>
+          <option value="">Select a Service</option>
+          <option value="House Washing">House Washing</option>
+          <option value="Roof Cleaning">Roof Cleaning</option>
+          <option value="Driveway/Patio Cleaning">Driveway/Patio Cleaning</option>
+          <option value="Deck Restoration">Deck Restoration</option>
+          <option value="Commercial Washing">Commercial Washing</option>
+        </select>
+      </label><br><br>
+      <label>Message:<br><textarea name="message" required></textarea></label><br><br>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Contact: Isaiah Harris | 267-788-4998 | <a href="https://instagram.com/2lwashers" style="color: #fff;">@2lwashers</a></p>
+  </footer>
+</body>
+</html>
