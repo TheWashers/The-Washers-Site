@@ -1,120 +1,49 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>The Washers - Pressure Washing Services</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Washers</title>
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; background: #f7f9fc; color: #333; line-height: 1.6; }
-    header, footer {
-      background: #003366; color: white; text-align: center; padding: 40px 20px;
-    }
-    section {
-      padding: 30px 20px; max-width: 900px; margin: auto; background: white;
-      margin-top: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-    }
-    h2 {
-      color: #003366;
-      border-bottom: 2px solid #00aaff;
-      padding-bottom: 5px;
-    }
-    ul { list-style: square; padding-left: 20px; }
-    input, select, textarea, button {
-      width: 100%; padding: 10px; margin-top: 5px; margin-bottom: 15px;
-      border: 1px solid #ccc; border-radius: 4px;
-    }
-    button {
-      background-color: #003366; color: white; border: none; cursor: pointer;
-    }
-    button:hover { background-color: #005499; }
-    .testimonial {
-      background: #f0f8ff;
-      border-left: 5px solid #00aaff;
-      padding: 15px;
-      margin-top: 10px;
-      border-radius: 5px;
-    }
-    footer a { color: #ffffff; text-decoration: underline; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; }
+    header, footer { background: #333; color: #fff; padding: 1rem; text-align: center; }
+    section { padding: 2rem; }
+    .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; }
+    img { width: 100%; border-radius: 8px; }
   </style>
 </head>
 <body>
-
-<header>
-  <h1>The Washers</h1>
-  <p>Central PA & Maryland’s Trusted Pressure Washing Experts</p>
-</header>
-
-<section>
-  <h2>About Us</h2>
-  <p>Hi, I’m Isaiah Harris, owner of The Washers. We provide professional, high-powered cleaning solutions for homes, businesses, and everything in between. Open 24/7 and proudly serving Central PA and parts of Maryland.</p>
-</section>
-
-<section class="services">
-  <h2>Services Offered</h2>
-  <ul>
-    <li>House Washing</li>
-    <li>Roof & Gutter Cleaning</li>
-    <li>Driveways & Sidewalks</li>
-    <li>Deck & Fence Restoration</li>
-    <li>Commercial Pressure Washing</li>
-    <li>Custom Jobs on Request</li>
-  </ul>
-</section>
+  <header>
+    <h1>The Washers</h1>
+    <p>Pressure Washing Experts in Central PA & Maryland</p>
+  </header>
 
 <section>
-  <h2>Testimonials</h2>
-  <div class="testimonial">
-    <p>"The Washers did an incredible job on our driveway! It looks brand new. Super friendly and professional." <br>– Jenna R., Harrisburg, PA</p>
-  </div>
-  <div class="testimonial">
-    <p>"I was blown away by how clean our siding came out. Isaiah was prompt, courteous, and affordable." <br>– Mike T., York, PA</p>
-  </div>
-  <div class="testimonial">
-    <p>"Highly recommend The Washers. They got years of grime off our fence and deck — looks amazing!" <br>– Ashley W., Lancaster, PA</p>
+  <h2 style="text-align:center;">Project Gallery</h2>
+  <div class="gallery">
+    <img src="images/7340655E-BDD2-465E-B496-3A21B17A6C17.jpeg" alt="Project photo" />
+    <img src="images/098D944B-EB61-49DA-92F7-F9D0EC947819.jpeg" alt="Project photo" />
+    <img src="images/50161A22-D397-47C8-BA57-8B228BE03CC0.jpeg" alt="Project photo" />
+    <img src="images/AEBD5497-826A-4D80-81BF-3B79BE1E1AF7.jpeg" alt="Project photo" />
+    <img src="images/25FA0DE0-4A3D-42FC-B70D-3F3A791E1FED.jpeg" alt="Project photo" />
+    <img src="images/34846D86-AF9E-41F5-8EB9-7289DCFD8879.jpeg" alt="Project photo" />
+    <img src="images/55D0EF8D-7EA9-4737-AECA-FD9FB1552FD7.jpeg" alt="Project photo" />
+    <img src="images/B97AF03C-4AC6-4405-AE0F-410B7B99496C.jpeg" alt="Project photo" />
+    <img src="images/F8658A29-97E9-4742-99F4-1C7C99CA88AA.jpeg" alt="Project photo" />
   </div>
 </section>
 
-<section>
-  <h2>Get a Quick Estimate & Send a Message</h2>
-  <form action="https://formspree.io/f/mrbkjwae" method="POST">
-    <input type="hidden" name="_subject" value="New Quote Request from Website">
-    <input type="hidden" name="_template" value="table">
-
-    <label for="name">Your Name:</label>
-    <input type="text" name="name" required placeholder="Full Name">
-
-    <label for="phone">Phone Number:</label>
-    <input type="tel" name="phone" required placeholder="e.g., 267-788-4998">
-
-    <label for="email">Your Email:</label>
-    <input type="email" name="_replyto" required placeholder="you@example.com">
-
-    <label for="service">Select a Service:</label>
-    <select name="service" required>
-      <option value="">--Choose--</option>
-      <option value="House Washing">House Washing ($0.15/sq ft)</option>
-      <option value="Driveway Cleaning">Driveway Cleaning ($0.12/sq ft)</option>
-      <option value="Roof Cleaning">Roof Cleaning ($0.25/sq ft)</option>
-      <option value="Deck & Fence Restoration">Deck & Fence Restoration ($3.00/ft)</option>
-      <option value="Gutter Cleaning">Gutter Cleaning ($2.50/10ft)</option>
-    </select>
-
-    <label for="size">Enter Size (sq ft or linear ft):</label>
-    <input type="number" name="size" min="1" required placeholder="e.g., 500">
-
-    <label for="message">Additional Message:</label>
-    <textarea name="message" rows="4" placeholder="Let us know any extra details..."></textarea>
-
-    <button type="submit">Send Estimate Request</button>
+<section id="quote">
+  <h2 style="text-align:center;">Get a Free Estimate</h2>
+  <form action="https://formspree.io/f/mrbkjwae" method="POST" style="max-width: 600px; margin: auto;">
+    <label>Your email:<br><input type="email" name="email" required></label><br><br>
+    <label>Your message:<br><textarea name="message" required></textarea></label><br><br>
+    <button type="submit">Send</button>
   </form>
 </section>
 
 <footer>
-  <p>Phone: <a href="tel:2677884998">267-788-4998</a><br>
-  Instagram: <a href="https://instagram.com/2lwashers" target="_blank">@2lwashers</a></p>
-  <p>&copy; 2025 The Washers | Designed for Isaiah Harris</p>
+  <p>Contact: Isaiah Harris | 267-788-4998 | <a href="https://instagram.com/2lwashers" style="color: #fff;">@2lwashers</a></p>
 </footer>
-
 </body>
 </html>
